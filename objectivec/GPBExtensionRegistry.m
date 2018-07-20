@@ -28,9 +28,8 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#import "GPBExtensionRegistry.h"
-
 #import "GPBBootstrap.h"
+#import "GPBExtensionRegistry.h"
 #import "GPBDescriptor.h"
 
 @implementation GPBExtensionRegistry {

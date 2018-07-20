@@ -122,6 +122,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6D70610720F56FAE00162419 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7461B52D0F94FAF800A0C422;
+			remoteInfo = ProtocolBuffers;
+		};
 		8BBEA4BC147C729A00C4ADB7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -628,6 +635,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D7060FF20F562AE00162419 /* Build configuration list for PBXNativeTarget "ProtocolBuffersExternal" */;
 			buildPhases = (
+				6D70610620F56A6F00162419 /* Generate Namespace Header */,
 				6D7060E320F562AE00162419 /* Headers */,
 				6D7060E420F562AE00162419 /* Sources */,
 				6D7060FD20F562AE00162419 /* Frameworks */,
@@ -635,6 +643,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6D70610820F56FAE00162419 /* PBXTargetDependency */,
 			);
 			name = ProtocolBuffersExternal;
 			productName = "ProtocolBuffers-iPhoneDevice";
@@ -749,6 +758,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6D70610620F56A6F00162419 /* Generate Namespace Header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Namespace Header";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#sh ${SRCROOT}/build-scripts/generate-namespace-header.sh";
+		};
 		F4B62A791AF91F7500AFCEDC /* Script: Check Runtime Stamps */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -900,6 +923,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6D70610820F56FAE00162419 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7461B52D0F94FAF800A0C422 /* ProtocolBuffers */;
+			targetProxy = 6D70610720F56FAE00162419 /* PBXContainerItemProxy */;
+		};
 		8BBEA4BD147C729A00C4ADB7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7461B52D0F94FAF800A0C422 /* ProtocolBuffers */;
@@ -921,6 +949,10 @@
 					armv7s,
 				);
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"WSO_EXTERNAL_LIB=1",
+					"DEBUG=1",
+				);
 				HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -935,6 +967,7 @@
 					armv7s,
 				);
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "WSO_EXTERNAL_LIB=1";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

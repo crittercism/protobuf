@@ -28,6 +28,10 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+#ifdef WSO_EXTERNAL_LIB
+#import "GPBProtocolBuffersNamespace.h"
+#endif
+
 /**
  * The Objective C runtime has complete enough info that most protos don’t end
  * up using this, so leaving it on is no cost or very little cost.  If you
