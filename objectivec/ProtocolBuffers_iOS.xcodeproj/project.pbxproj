@@ -1231,6 +1231,7 @@
 				ARCHS = (
 					"$(ARCHS_STANDARD)",
 					armv7s,
+					arm64e,
 				);
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1250,6 +1251,7 @@
 				ARCHS = (
 					"$(ARCHS_STANDARD)",
 					armv7s,
+					arm64e,
 				);
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "WSO_EXTERNAL_LIB=1";
@@ -1266,6 +1268,7 @@
 				ARCHS = (
 					"$(ARCHS_STANDARD)",
 					armv7s,
+					arm64e,
 				);
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)";
@@ -1281,6 +1284,7 @@
 				ARCHS = (
 					"$(ARCHS_STANDARD)",
 					armv7s,
+					arm64e,
 				);
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)";
