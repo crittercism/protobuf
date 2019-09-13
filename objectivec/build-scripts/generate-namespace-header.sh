@@ -7,7 +7,13 @@ set -e -x
 
 header=$SRCROOT/GPBProtocolBuffersNamespace.h
 prefix="WSO"
-dependentLib=$TARGET_BUILD_DIR/libProtocolBuffers.a
+dependentLib=""
+
+if [ ${PLATFORM_NAME} = "iphoneos" ] || [ ${PLATFORM_NAME} = "iphonesimulator" ]; then
+	dependentLib=$TARGET_BUILD_DIR/libProtocolBuffers.a
+elif [ ${PLATFORM_NAME} = "appletvos" ] || [ ${PLATFORM_NAME} = "appletvsimulator" ]; then
+	dependentLib=$TARGET_BUILD_DIR/libProtocolBuffers-tvOS.a
+fi
 
 # Remove old version of the header file
 #touch header
