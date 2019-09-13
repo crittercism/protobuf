@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6D7060E220F562AE00162419"
-               BuildableName = "libProtocolBuffersExternal.a"
-               BlueprintName = "ProtocolBuffersExternal"
-               ReferencedContainer = "container:ProtocolBuffers_iOS.xcodeproj">
+               BlueprintIdentifier = "6D743CE4232B74F400D6E8D7"
+               BuildableName = "libProtocolBuffersExternal-tvOS.a"
+               BlueprintName = "ProtocolBuffersExternal-tvOS"
+               ReferencedContainer = "container:ProtocolBuffers_tvOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -50,10 +50,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6D7060E220F562AE00162419"
-            BuildableName = "libProtocolBuffersExternal.a"
-            BlueprintName = "ProtocolBuffersExternal"
-            ReferencedContainer = "container:ProtocolBuffers_iOS.xcodeproj">
+            BlueprintIdentifier = "6D743CE4232B74F400D6E8D7"
+            BuildableName = "libProtocolBuffersExternal-tvOS.a"
+            BlueprintName = "ProtocolBuffersExternal-tvOS"
+            ReferencedContainer = "container:ProtocolBuffers_tvOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
