@@ -33,7 +33,7 @@
 //
 // They avoid the allocation of a full dictionary or a full list: they simply
 // store a pointer to the parent descriptor, use the C++ Descriptor methods (see
-// google/protobuf/descriptor.h) to retrieve other descriptors, and create
+// net/proto2/public/descriptor.h) to retrieve other descriptors, and create
 // Python objects on the fly.
 //
 // The containers fully conform to abc.Mapping and abc.Sequence, and behave just
@@ -64,10 +64,12 @@
   #if PY_VERSION_HEX < 0x03030000
     #error "Python 3.0 - 3.2 are not supported."
   #endif
-  #define PyString_AsStringAndSize(ob, charpp, sizep) \
-    (PyUnicode_Check(ob)? \
-       ((*(charpp) = PyUnicode_AsUTF8AndSize(ob, (sizep))) == NULL? -1: 0): \
-       PyBytes_AsStringAndSize(ob, (charpp), (sizep)))
+#define PyString_AsStringAndSize(ob, charpp, sizep)                           \
+  (PyUnicode_Check(ob) ? ((*(charpp) = const_cast<char*>(                     \
+                               PyUnicode_AsUTF8AndSize(ob, (sizep)))) == NULL \
+                              ? -1                                            \
+                              : 0)                                            \
+                       : PyBytes_AsStringAndSize(ob, (charpp), (sizep)))
 #endif
 
 namespace google {
@@ -637,6 +639,7 @@ int Find(PyContainer* self, PyObject* item) {
   // the .proto file definition.
   const void* descriptor_ptr = PyDescriptor_AsVoidPtr(item);
   if (descriptor_ptr == NULL) {
+    PyErr_Clear();
     // Not a descriptor, it cannot be in the list.
     return -1;
   }

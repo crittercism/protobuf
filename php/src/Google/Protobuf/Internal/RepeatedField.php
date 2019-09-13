@@ -118,8 +118,8 @@ class RepeatedField implements \ArrayAccess, \IteratorAggregate, \Countable
      *
      * @param long $offset The index of the element to be fetched.
      * @return object The stored element at given index.
-     * @throws ErrorException Invalid type for index.
-     * @throws ErrorException Non-existing index.
+     * @throws \ErrorException Invalid type for index.
+     * @throws \ErrorException Non-existing index.
      */
     public function offsetGet($offset)
     {
@@ -134,22 +134,29 @@ class RepeatedField implements \ArrayAccess, \IteratorAggregate, \Countable
      * @param long $offset The index of the element to be assigned.
      * @param object $value The element to be assigned.
      * @return void
-     * @throws ErrorException Invalid type for index.
-     * @throws ErrorException Non-existing index.
-     * @throws ErrorException Incorrect type of the element.
+     * @throws \ErrorException Invalid type for index.
+     * @throws \ErrorException Non-existing index.
+     * @throws \ErrorException Incorrect type of the element.
      */
     public function offsetSet($offset, $value)
     {
         switch ($this->type) {
+            case GPBType::SFIXED32:
+            case GPBType::SINT32:
             case GPBType::INT32:
+            case GPBType::ENUM:
                 GPBUtil::checkInt32($value);
                 break;
+            case GPBType::FIXED32:
             case GPBType::UINT32:
                 GPBUtil::checkUint32($value);
                 break;
+            case GPBType::SFIXED64:
+            case GPBType::SINT64:
             case GPBType::INT64:
                 GPBUtil::checkInt64($value);
                 break;
+            case GPBType::FIXED64:
             case GPBType::UINT64:
                 GPBUtil::checkUint64($value);
                 break;
@@ -161,6 +168,9 @@ class RepeatedField implements \ArrayAccess, \IteratorAggregate, \Countable
                 break;
             case GPBType::BOOL:
                 GPBUtil::checkBool($value);
+                break;
+            case GPBType::BYTES:
+                GPBUtil::checkString($value, false);
                 break;
             case GPBType::STRING:
                 GPBUtil::checkString($value, true);
@@ -196,8 +206,8 @@ class RepeatedField implements \ArrayAccess, \IteratorAggregate, \Countable
      *
      * @param long $offset The index of the element to be removed.
      * @return void
-     * @throws ErrorException Invalid type for index.
-     * @throws ErrorException The element to be removed is not at the end of the
+     * @throws \ErrorException Invalid type for index.
+     * @throws \ErrorException The element to be removed is not at the end of the
      * RepeatedField.
      */
     public function offsetUnset($offset)
@@ -219,7 +229,7 @@ class RepeatedField implements \ArrayAccess, \IteratorAggregate, \Countable
      *
      * @param long $offset The index of the element to be removed.
      * @return bool True if the element at the given offset exists.
-     * @throws ErrorException Invalid type for index.
+     * @throws \ErrorException Invalid type for index.
      */
     public function offsetExists($offset)
     {

@@ -131,8 +131,8 @@ class MapField implements \ArrayAccess, \IteratorAggregate, \Countable
      *
      * @param object $key The key of the element to be fetched.
      * @return object The stored element at given key.
-     * @throws ErrorException Invalid type for index.
-     * @throws ErrorException Non-existing index.
+     * @throws \ErrorException Invalid type for index.
+     * @throws \ErrorException Non-existing index.
      */
     public function offsetGet($key)
     {
@@ -147,24 +147,31 @@ class MapField implements \ArrayAccess, \IteratorAggregate, \Countable
      * @param object $key The key of the element to be fetched.
      * @param object $value The element to be assigned.
      * @return void
-     * @throws ErrorException Invalid type for key.
-     * @throws ErrorException Invalid type for value.
-     * @throws ErrorException Non-existing key.
+     * @throws \ErrorException Invalid type for key.
+     * @throws \ErrorException Invalid type for value.
+     * @throws \ErrorException Non-existing key.
      */
     public function offsetSet($key, $value)
     {
         $this->checkKey($this->key_type, $key);
 
         switch ($this->value_type) {
+            case GPBType::SFIXED32:
+            case GPBType::SINT32:
             case GPBType::INT32:
+            case GPBType::ENUM:
                 GPBUtil::checkInt32($value);
                 break;
+            case GPBType::FIXED32:
             case GPBType::UINT32:
                 GPBUtil::checkUint32($value);
                 break;
+            case GPBType::SFIXED64:
+            case GPBType::SINT64:
             case GPBType::INT64:
                 GPBUtil::checkInt64($value);
                 break;
+            case GPBType::FIXED64:
             case GPBType::UINT64:
                 GPBUtil::checkUint64($value);
                 break;
@@ -200,7 +207,7 @@ class MapField implements \ArrayAccess, \IteratorAggregate, \Countable
      *
      * @param object $key The key of the element to be removed.
      * @return void
-     * @throws ErrorException Invalid type for key.
+     * @throws \ErrorException Invalid type for key.
      */
     public function offsetUnset($key)
     {
@@ -215,7 +222,7 @@ class MapField implements \ArrayAccess, \IteratorAggregate, \Countable
      *
      * @param object $key The key of the element to be removed.
      * @return bool True if the element at the given key exists.
-     * @throws ErrorException Invalid type for key.
+     * @throws \ErrorException Invalid type for key.
      */
     public function offsetExists($key)
     {
@@ -249,35 +256,23 @@ class MapField implements \ArrayAccess, \IteratorAggregate, \Countable
     private function checkKey($key_type, &$key)
     {
         switch ($key_type) {
+            case GPBType::SFIXED32:
+            case GPBType::SINT32:
             case GPBType::INT32:
                 GPBUtil::checkInt32($key);
                 break;
+            case GPBType::FIXED32:
             case GPBType::UINT32:
                 GPBUtil::checkUint32($key);
                 break;
+            case GPBType::SFIXED64:
+            case GPBType::SINT64:
             case GPBType::INT64:
                 GPBUtil::checkInt64($key);
                 break;
+            case GPBType::FIXED64:
             case GPBType::UINT64:
                 GPBUtil::checkUint64($key);
-                break;
-            case GPBType::FIXED64:
-                GPBUtil::checkUint64($key);
-                break;
-            case GPBType::FIXED32:
-                GPBUtil::checkUint32($key);
-                break;
-            case GPBType::SFIXED64:
-                GPBUtil::checkInt64($key);
-                break;
-            case GPBType::SFIXED32:
-                GPBUtil::checkInt32($key);
-                break;
-            case GPBType::SINT64:
-                GPBUtil::checkInt64($key);
-                break;
-            case GPBType::SINT32:
-                GPBUtil::checkInt32($key);
                 break;
             case GPBType::BOOL:
                 GPBUtil::checkBool($key);

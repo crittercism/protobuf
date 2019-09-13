@@ -88,7 +88,6 @@ std::string GeneratedMetadataFileName(const FileDescriptor* file,
 std::string LabelForField(FieldDescriptor* field);
 std::string TypeName(FieldDescriptor* field);
 std::string UnderscoresToCamelCase(const string& name, bool cap_first_letter);
-std::string EscapeDollor(const string& to_escape);
 std::string BinaryToHex(const string& binary);
 void Indent(io::Printer* printer);
 void Outdent(io::Printer* printer);
@@ -99,6 +98,10 @@ void GenerateMessageConstructorDocComment(io::Printer* printer,
                                           int is_descriptor);
 void GenerateFieldDocComment(io::Printer* printer, const FieldDescriptor* field,
                              int is_descriptor, int function_type);
+void GenerateWrapperFieldGetterDocComment(io::Printer* printer,
+                                          const FieldDescriptor* field);
+void GenerateWrapperFieldSetterDocComment(io::Printer* printer,
+                                          const FieldDescriptor* field);
 void GenerateEnumDocComment(io::Printer* printer, const EnumDescriptor* enum_,
                             int is_descriptor);
 void GenerateEnumValueDocComment(io::Printer* printer,
@@ -149,7 +152,7 @@ template <typename DescriptorType>
 std::string ClassNamePrefix(const string& classname,
                             const DescriptorType* desc) {
   const string& prefix = (desc->file()->options()).php_class_prefix();
-  if (prefix != "") {
+  if (!prefix.empty()) {
     return prefix;
   }
 
@@ -240,13 +243,13 @@ template <typename DescriptorType>
 std::string RootPhpNamespace(const DescriptorType* desc, bool is_descriptor) {
   if (desc->file()->options().has_php_namespace()) {
     const string& php_namespace = desc->file()->options().php_namespace();
-    if (php_namespace != "") {
+    if (!php_namespace.empty()) {
       return php_namespace;
     }
     return "";
   }
 
-  if (desc->file()->package() != "") {
+  if (!desc->file()->package().empty()) {
     return PhpName(desc->file()->package(), is_descriptor);
   }
   return "";
@@ -256,7 +259,7 @@ template <typename DescriptorType>
 std::string FullClassName(const DescriptorType* desc, bool is_descriptor) {
   string classname = GeneratedClassNameImpl(desc);
   string php_namespace = RootPhpNamespace(desc, is_descriptor);
-  if (php_namespace != "") {
+  if (!php_namespace.empty()) {
     return php_namespace + "\\" + classname;
   }
   return classname;
@@ -266,7 +269,7 @@ template <typename DescriptorType>
 std::string LegacyFullClassName(const DescriptorType* desc, bool is_descriptor) {
   string classname = LegacyGeneratedClassName(desc);
   string php_namespace = RootPhpNamespace(desc, is_descriptor);
-  if (php_namespace != "") {
+  if (!php_namespace.empty()) {
     return php_namespace + "\\" + classname;
   }
   return classname;
@@ -348,7 +351,7 @@ std::string GeneratedMetadataFileName(const FileDescriptor* file,
   if (file->options().has_php_metadata_namespace()) {
     const string& php_metadata_namespace =
         file->options().php_metadata_namespace();
-    if (php_metadata_namespace != "" && php_metadata_namespace != "\\") {
+    if (!php_metadata_namespace.empty() && php_metadata_namespace != "\\") {
       result += php_metadata_namespace;
       std::replace(result.begin(), result.end(), '\\', '/');
       if (result.at(result.size() - 1) != '/') {
@@ -548,45 +551,41 @@ std::string EnumOrMessageSuffix(
 
 // Converts a name to camel-case. If cap_first_letter is true, capitalize the
 // first letter.
-std::string UnderscoresToCamelCase(const string& input, bool cap_first_letter) {
+std::string UnderscoresToCamelCase(const string& name, bool cap_first_letter) {
   std::string result;
-  for (int i = 0; i < input.size(); i++) {
-    if ('a' <= input[i] && input[i] <= 'z') {
+  for (int i = 0; i < name.size(); i++) {
+    if ('a' <= name[i] && name[i] <= 'z') {
       if (cap_first_letter) {
-        result += input[i] + ('A' - 'a');
+        result += name[i] + ('A' - 'a');
       } else {
-        result += input[i];
+        result += name[i];
       }
       cap_first_letter = false;
-    } else if ('A' <= input[i] && input[i] <= 'Z') {
+    } else if ('A' <= name[i] && name[i] <= 'Z') {
       if (i == 0 && !cap_first_letter) {
         // Force first letter to lower-case unless explicitly told to
         // capitalize it.
-        result += input[i] + ('a' - 'A');
+        result += name[i] + ('a' - 'A');
       } else {
         // Capital letters after the first are left as-is.
-        result += input[i];
+        result += name[i];
       }
       cap_first_letter = false;
-    } else if ('0' <= input[i] && input[i] <= '9') {
-      result += input[i];
+    } else if ('0' <= name[i] && name[i] <= '9') {
+      result += name[i];
       cap_first_letter = true;
     } else {
       cap_first_letter = true;
     }
   }
   // Add a trailing "_" if the name should be altered.
-  if (input[input.size() - 1] == '#') {
+  if (name[name.size() - 1] == '#') {
     result += '_';
   }
   return result;
 }
 
-std::string EscapeDollor(const string& to_escape) {
-  return StringReplace(to_escape, "$", "\\$", true);
-}
-
-std::string BinaryToHex(const string& src) {
+std::string BinaryToHex(const string& binary) {
   string dest;
   size_t i;
   unsigned char symbol[16] = {
@@ -596,12 +595,12 @@ std::string BinaryToHex(const string& src) {
     'c', 'd', 'e', 'f',
   };
 
-  dest.resize(src.size() * 2);
+  dest.resize(binary.size() * 2);
   char* append_ptr = &dest[0];
 
-  for (i = 0; i < src.size(); i++) {
-    *append_ptr++ = symbol[(src[i] & 0xf0) >> 4];
-    *append_ptr++ = symbol[src[i] & 0x0f];
+  for (i = 0; i < binary.size(); i++) {
+    *append_ptr++ = symbol[(binary[i] & 0xf0) >> 4];
+    *append_ptr++ = symbol[binary[i] & 0x0f];
   }
 
   return dest;
@@ -672,6 +671,21 @@ void GenerateFieldAccessor(const FieldDescriptor* field, bool is_descriptor,
         "}\n\n",
         "camel_name", UnderscoresToCamelCase(field->name(), true), "name",
         field->name());
+  }
+
+  // For wrapper types, generate an additional getXXXUnwrapped getter
+  if (!field->is_map() &&
+      !field->is_repeated() &&
+      field->cpp_type() == FieldDescriptor::CPPTYPE_MESSAGE &&
+      IsWrapperType(field)) {
+    GenerateWrapperFieldGetterDocComment(printer, field);
+    printer->Print(
+        "public function get^camel_name^Unwrapped()\n"
+        "{\n"
+        "    $wrapper = $this->get^camel_name^();\n"
+        "    return is_null($wrapper) ? null : $wrapper->getValue();\n"
+        "}\n\n",
+        "camel_name", UnderscoresToCamelCase(field->name(), true));
   }
 
   // Generate setter.
@@ -772,6 +786,22 @@ void GenerateFieldAccessor(const FieldDescriptor* field, bool is_descriptor,
   printer->Print(
       "}\n\n");
 
+  // For wrapper types, generate an additional setXXXValue getter
+  if (!field->is_map() &&
+      !field->is_repeated() &&
+      field->cpp_type() == FieldDescriptor::CPPTYPE_MESSAGE &&
+      IsWrapperType(field)) {
+    GenerateWrapperFieldSetterDocComment(printer, field);
+    printer->Print(
+        "public function set^camel_name^Unwrapped($var)\n"
+        "{\n"
+        "    $wrappedVar = is_null($var) ? null : new \\^wrapper_type^(['value' => $var]);\n"
+        "    return $this->set^camel_name^($wrappedVar);\n"
+        "}\n\n",
+        "camel_name", UnderscoresToCamelCase(field->name(), true),
+        "wrapper_type", LegacyFullClassName(field->message_type(), is_descriptor));
+  }
+
   // Generate has method for proto2 only.
   if (is_descriptor) {
     printer->Print(
@@ -844,7 +874,7 @@ void GenerateMessageToPool(const string& name_prefix, const Descriptor* message,
           "field", field->name(),
           "key", ToUpper(key->type_name()),
           "value", ToUpper(val->type_name()),
-          "number", SimpleItoa(field->number()),
+          "number", StrCat(field->number()),
           "other", EnumOrMessageSuffix(val, true));
     } else if (!field->containing_oneof()) {
       printer->Print(
@@ -853,7 +883,7 @@ void GenerateMessageToPool(const string& name_prefix, const Descriptor* message,
           "field", field->name(),
           "label", LabelForField(field),
           "type", ToUpper(field->type_name()),
-          "number", SimpleItoa(field->number()),
+          "number", StrCat(field->number()),
           "other", EnumOrMessageSuffix(field, true));
     }
   }
@@ -871,7 +901,7 @@ void GenerateMessageToPool(const string& name_prefix, const Descriptor* message,
           "\\Google\\Protobuf\\Internal\\GPBType::^type^, ^number^^other^)\n",
           "field", field->name(),
           "type", ToUpper(field->type_name()),
-          "number", SimpleItoa(field->number()),
+          "number", StrCat(field->number()),
           "other", EnumOrMessageSuffix(field, true));
     }
     printer->Print("->finish()\n");
@@ -975,7 +1005,7 @@ void GenerateAddFileToPool(const FileDescriptor* file, bool is_descriptor,
 
     Outdent(printer);
     printer->Print(
-        "));\n\n");
+        "), true);\n\n");
   }
   printer->Print(
       "static::$is_initialized = true;\n");
@@ -1068,7 +1098,7 @@ void LegacyGenerateClassFile(const FileDescriptor* file, const DescriptorType* d
   GenerateHead(file, &printer);
 
   std::string php_namespace = RootPhpNamespace(desc, is_descriptor);
-  if (php_namespace != "") {
+  if (!php_namespace.empty()) {
     printer.Print(
         "namespace ^name^;\n\n",
         "name", php_namespace);
@@ -1109,13 +1139,17 @@ void GenerateEnumFile(const FileDescriptor* file, const EnumDescriptor* en,
     printer.Print(
         "namespace ^name^;\n\n",
         "name", fullname.substr(0, lastindex));
+
+    // We only need this 'use' statement if the enum has a namespace.
+    // Otherwise, we get a warning that the use statement has no effect.
+    printer.Print("use UnexpectedValueException;\n\n");
   }
+
+  GenerateEnumDocComment(&printer, en, is_descriptor);
 
   if (lastindex != string::npos) {
     fullname = fullname.substr(lastindex + 1);
   }
-
-  GenerateEnumDocComment(&printer, en, is_descriptor);
 
   printer.Print(
       "class ^name^\n"
@@ -1130,6 +1164,53 @@ void GenerateEnumFile(const FileDescriptor* file, const EnumDescriptor* en,
                   "name", ConstantNamePrefix(value->name()) + value->name(),
                   "number", IntToString(value->number()));
   }
+
+  printer.Print("\nprivate static $valueToName = [\n");
+  Indent(&printer);
+  for (int i = 0; i < en->value_count(); i++) {
+    const EnumValueDescriptor* value = en->value(i);
+    printer.Print("self::^name^ => '^name^',\n",
+                  "name", ConstantNamePrefix(value->name()) + value->name());
+  }
+  Outdent(&printer);
+  printer.Print("];\n");
+
+  printer.Print(
+      "\npublic static function name($value)\n"
+      "{\n");
+  Indent(&printer);
+  printer.Print("if (!isset(self::$valueToName[$value])) {\n");
+  Indent(&printer);
+  printer.Print("throw new UnexpectedValueException(sprintf(\n");
+  Indent(&printer);
+  Indent(&printer);
+  printer.Print("'Enum %s has no name defined for value %s', __CLASS__, $value));\n");
+  Outdent(&printer);
+  Outdent(&printer);
+  Outdent(&printer);
+  printer.Print("}\n"
+                "return self::$valueToName[$value];\n");
+  Outdent(&printer);
+  printer.Print("}\n\n");
+
+  printer.Print(
+      "\npublic static function value($name)\n"
+      "{\n");
+  Indent(&printer);
+  printer.Print("$const = __CLASS__ . '::' . strtoupper($name);\n"
+                "if (!defined($const)) {\n");
+  Indent(&printer);
+  printer.Print("throw new UnexpectedValueException(sprintf(\n");
+  Indent(&printer);
+  Indent(&printer);
+  printer.Print("'Enum %s has no value defined for name %s', __CLASS__, $name));\n");
+  Outdent(&printer);
+  Outdent(&printer);
+  Outdent(&printer);
+  printer.Print("}\n"
+                "return constant($const);\n");
+  Outdent(&printer);
+  printer.Print("}\n");
 
   Outdent(&printer);
   printer.Print("}\n\n");
@@ -1377,7 +1458,7 @@ static void GenerateDocCommentBodyForLocation(
     // HTML-escape them so that they don't accidentally close the doc comment.
     comments = EscapePhpdoc(comments);
 
-    std::vector<string> lines = Split(comments, "\n");
+    std::vector<string> lines = Split(comments, "\n", true);
     while (!lines.empty() && lines.back().empty()) {
       lines.pop_back();
     }
@@ -1494,6 +1575,41 @@ void GenerateFieldDocComment(io::Printer* printer, const FieldDescriptor* field,
     printer->Print(" * @return ^php_type^\n",
       "php_type", PhpGetterTypeName(field, is_descriptor));
   }
+  printer->Print(" */\n");
+}
+
+void GenerateWrapperFieldGetterDocComment(io::Printer* printer, const FieldDescriptor* field) {
+  // Generate a doc comment for the special getXXXValue methods that are
+  // generated for wrapper types.
+  const FieldDescriptor* primitiveField = field->message_type()->FindFieldByName("value");
+  printer->Print("/**\n");
+  printer->Print(
+      " * Returns the unboxed value from <code>get^camel_name^()</code>\n\n",
+      "camel_name", UnderscoresToCamelCase(field->name(), true));
+  GenerateDocCommentBody(printer, field);
+  printer->Print(
+    " * Generated from protobuf field <code>^def^</code>\n",
+    "def", EscapePhpdoc(FirstLineOf(field->DebugString())));
+  printer->Print(" * @return ^php_type^|null\n",
+        "php_type", PhpGetterTypeName(primitiveField, false));
+  printer->Print(" */\n");
+}
+
+void GenerateWrapperFieldSetterDocComment(io::Printer* printer, const FieldDescriptor* field) {
+  // Generate a doc comment for the special setXXXValue methods that are
+  // generated for wrapper types.
+  const FieldDescriptor* primitiveField = field->message_type()->FindFieldByName("value");
+  printer->Print("/**\n");
+  printer->Print(
+      " * Sets the field by wrapping a primitive type in a ^message_name^ object.\n\n",
+      "message_name", LegacyFullClassName(field->message_type(), false));
+  GenerateDocCommentBody(printer, field);
+  printer->Print(
+    " * Generated from protobuf field <code>^def^</code>\n",
+    "def", EscapePhpdoc(FirstLineOf(field->DebugString())));
+  printer->Print(" * @param ^php_type^|null $var\n",
+        "php_type", PhpSetterTypeName(primitiveField, false));
+  printer->Print(" * @return $this\n");
   printer->Print(" */\n");
 }
 
