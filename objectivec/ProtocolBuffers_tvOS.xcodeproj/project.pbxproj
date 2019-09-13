@@ -8,6 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		5102DABC1891A073002037B6 /* GPBConcurrencyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5102DABB1891A052002037B6 /* GPBConcurrencyTests.m */; };
+		6D743CE7232B74F400D6E8D7 /* GPBCodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B48F0F94F99000A0C422 /* GPBCodedInputStream.m */; };
+		6D743CE8232B74F400D6E8D7 /* Empty.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675BC1B21D1440054530B /* Empty.pbobjc.m */; };
+		6D743CE9232B74F400D6E8D7 /* GPBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = F4487C711A9F906200531423 /* GPBArray.m */; };
+		6D743CEA232B74F400D6E8D7 /* GPBCodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4910F94F99000A0C422 /* GPBCodedOutputStream.m */; };
+		6D743CEB232B74F400D6E8D7 /* GPBExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4A90F94F99000A0C422 /* GPBExtensionRegistry.m */; };
+		6D743CEC232B74F400D6E8D7 /* FieldMask.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675BE1B21D1440054530B /* FieldMask.pbobjc.m */; };
+		6D743CED232B74F400D6E8D7 /* GPBUnknownField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4AF0F94F99000A0C422 /* GPBUnknownField.m */; };
+		6D743CEE232B74F400D6E8D7 /* GPBMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4BF0F94F99000A0C422 /* GPBMessage.m */; };
+		6D743CEF232B74F400D6E8D7 /* Duration.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4248DE1A929C7D00BC1EC6 /* Duration.pbobjc.m */; };
+		6D743CF0232B74F400D6E8D7 /* GPBUnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4E20F94F99000A0C422 /* GPBUnknownFieldSet.m */; };
+		6D743CF1232B74F400D6E8D7 /* GPBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4E60F94F99000A0C422 /* GPBUtilities.m */; };
+		6D743CF2232B74F400D6E8D7 /* GPBWireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4E80F94F99000A0C422 /* GPBWireFormat.m */; };
+		6D743CF3232B74F400D6E8D7 /* Api.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675B91B21D1440054530B /* Api.pbobjc.m */; };
+		6D743CF4232B74F400D6E8D7 /* SourceContext.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675C01B21D1440054530B /* SourceContext.pbobjc.m */; };
+		6D743CF5232B74F400D6E8D7 /* GPBDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = F4353D251ABB156F005A6198 /* GPBDictionary.m */; };
+		6D743CF6232B74F400D6E8D7 /* GPBRootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79657914992E3E002FFBFC /* GPBRootObject.m */; };
+		6D743CF7232B74F400D6E8D7 /* GPBDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B96157314C8C38C00A2AC0B /* GPBDescriptor.m */; };
+		6D743CF8232B74F400D6E8D7 /* Any.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675B71B21D1440054530B /* Any.pbobjc.m */; };
+		6D743CF9232B74F400D6E8D7 /* GPBExtensionInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C69CB16DFD08D0081955B /* GPBExtensionInternals.m */; };
+		6D743CFA232B74F400D6E8D7 /* GPBWellKnownTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4248E21A929C8900BC1EC6 /* GPBWellKnownTypes.m */; };
+		6D743CFB232B74F400D6E8D7 /* Type.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675C51B21D1440054530B /* Type.pbobjc.m */; };
+		6D743CFC232B74F400D6E8D7 /* Struct.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675C21B21D1440054530B /* Struct.pbobjc.m */; };
+		6D743CFD232B74F400D6E8D7 /* Wrappers.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675C71B21D1440054530B /* Wrappers.pbobjc.m */; };
+		6D743CFE232B74F400D6E8D7 /* Timestamp.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4248E01A929C7D00BC1EC6 /* Timestamp.pbobjc.m */; };
+		6D743D00232B74F400D6E8D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		7461B5360F94FB4600A0C422 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		7461B53C0F94FB4E00A0C422 /* GPBCodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B48F0F94F99000A0C422 /* GPBCodedInputStream.m */; };
 		7461B53D0F94FB4E00A0C422 /* GPBCodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4910F94F99000A0C422 /* GPBCodedOutputStream.m */; };
@@ -33,7 +58,7 @@
 		8BBEA4B6147C727D00C4ADB7 /* GPBUnknownFieldSetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B6B80F94FDF900A0C422 /* GPBUnknownFieldSetTest.m */; };
 		8BBEA4B7147C727D00C4ADB7 /* GPBUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B6BA0F94FDF900A0C422 /* GPBUtilitiesTests.m */; };
 		8BBEA4B8147C727D00C4ADB7 /* GPBWireFormatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B6BC0F94FDF900A0C422 /* GPBWireFormatTests.m */; };
-		8BBEA4BB147C729200C4ADB7 /* libProtocolBuffers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7461B52E0F94FAF800A0C422 /* libProtocolBuffers.a */; };
+		8BBEA4BB147C729200C4ADB7 /* libProtocolBuffers-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7461B52E0F94FAF800A0C422 /* libProtocolBuffers-tvOS.a */; };
 		8BD3981F14BE59D70081D629 /* GPBUnittestProtos.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3981E14BE59D70081D629 /* GPBUnittestProtos.m */; };
 		8BF8193514A0DDA600A2C982 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		F401DC351A8E5C6F00FCC765 /* GPBArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F401DC341A8E5C6F00FCC765 /* GPBArrayTests.m */; };
@@ -98,6 +123,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6D743D05232B751000D6E8D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7461B52D0F94FAF800A0C422;
+			remoteInfo = ProtocolBuffers;
+		};
 		8BBEA4BC147C729A00C4ADB7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -120,6 +152,7 @@
 		51457B5F18D0B7AF00CCC606 /* GPBCodedInputStream_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBCodedInputStream_PackagePrivate.h; sourceTree = "<group>"; };
 		515B840C18B7DEE30031753B /* GPBDescriptor_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBDescriptor_PackagePrivate.h; sourceTree = "<group>"; };
 		5196A06918CE16B000B759E2 /* GPBMessage_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBMessage_PackagePrivate.h; sourceTree = "<group>"; };
+		6D743D04232B74F400D6E8D7 /* libProtocolBuffersExternal-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libProtocolBuffersExternal-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7401C1A90F950347006D8281 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		7461B48D0F94F99000A0C422 /* GPBBootstrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBBootstrap.h; sourceTree = "<group>"; };
 		7461B48E0F94F99000A0C422 /* GPBCodedInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBCodedInputStream.h; sourceTree = "<group>"; };
@@ -139,7 +172,7 @@
 		7461B4E60F94F99000A0C422 /* GPBUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBUtilities.m; sourceTree = "<group>"; };
 		7461B4E70F94F99000A0C422 /* GPBWireFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBWireFormat.h; sourceTree = "<group>"; };
 		7461B4E80F94F99000A0C422 /* GPBWireFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBWireFormat.m; sourceTree = "<group>"; };
-		7461B52E0F94FAF800A0C422 /* libProtocolBuffers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libProtocolBuffers.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7461B52E0F94FAF800A0C422 /* libProtocolBuffers-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libProtocolBuffers-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7461B69B0F94FDF800A0C422 /* GPBCodedInputStreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBCodedInputStreamTests.m; sourceTree = "<group>"; };
 		7461B69D0F94FDF800A0C422 /* GPBCodedOuputStreamTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBCodedOuputStreamTests.m; sourceTree = "<group>"; };
 		7461B6A30F94FDF800A0C422 /* GPBMessageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBMessageTests.m; sourceTree = "<group>"; };
@@ -275,6 +308,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6D743CFF232B74F400D6E8D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D743D00232B74F400D6E8D7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7461B52C0F94FAF800A0C422 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,7 +328,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BBEA4BB147C729200C4ADB7 /* libProtocolBuffers.a in Frameworks */,
+				8BBEA4BB147C729200C4ADB7 /* libProtocolBuffers-tvOS.a in Frameworks */,
 				8B9A5EEC18330A0F00A9D33B /* UIKit.framework in Frameworks */,
 				8BF8193514A0DDA600A2C982 /* Foundation.framework in Frameworks */,
 			);
@@ -323,9 +364,10 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7461B52E0F94FAF800A0C422 /* libProtocolBuffers.a */,
+				7461B52E0F94FAF800A0C422 /* libProtocolBuffers-tvOS.a */,
 				8BBEA4A6147C727100C4ADB7 /* UnitTests.xctest */,
 				F4487C6E1A9F8F8100531423 /* libTestSingleSourceBuild.a */,
+				6D743D04232B74F400D6E8D7 /* libProtocolBuffersExternal-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -551,6 +593,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		6D743CE5232B74F400D6E8D7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7461B52A0F94FAF800A0C422 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -585,9 +634,28 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		7461B52D0F94FAF800A0C422 /* ProtocolBuffers */ = {
+		6D743CE4232B74F400D6E8D7 /* ProtocolBuffersExternal-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7461B5330F94FAFD00A0C422 /* Build configuration list for PBXNativeTarget "ProtocolBuffers" */;
+			buildConfigurationList = 6D743D01232B74F400D6E8D7 /* Build configuration list for PBXNativeTarget "ProtocolBuffersExternal-tvOS" */;
+			buildPhases = (
+				6D743D07232B751F00D6E8D7 /* Generate Namspace Header */,
+				6D743CE5232B74F400D6E8D7 /* Headers */,
+				6D743CE6232B74F400D6E8D7 /* Sources */,
+				6D743CFF232B74F400D6E8D7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D743D06232B751000D6E8D7 /* PBXTargetDependency */,
+			);
+			name = "ProtocolBuffersExternal-tvOS";
+			productName = "ProtocolBuffers-iPhoneDevice";
+			productReference = 6D743D04232B74F400D6E8D7 /* libProtocolBuffersExternal-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7461B52D0F94FAF800A0C422 /* ProtocolBuffers-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7461B5330F94FAFD00A0C422 /* Build configuration list for PBXNativeTarget "ProtocolBuffers-tvOS" */;
 			buildPhases = (
 				7461B52A0F94FAF800A0C422 /* Headers */,
 				7461B52B0F94FAF800A0C422 /* Sources */,
@@ -597,9 +665,9 @@
 			);
 			dependencies = (
 			);
-			name = ProtocolBuffers;
+			name = "ProtocolBuffers-tvOS";
 			productName = "ProtocolBuffers-iPhoneDevice";
-			productReference = 7461B52E0F94FAF800A0C422 /* libProtocolBuffers.a */;
+			productReference = 7461B52E0F94FAF800A0C422 /* libProtocolBuffers-tvOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		8BBEA4A5147C727100C4ADB7 /* UnitTests */ = {
@@ -663,13 +731,15 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7461B52D0F94FAF800A0C422 /* ProtocolBuffers */,
+				7461B52D0F94FAF800A0C422 /* ProtocolBuffers-tvOS */,
+				6D743CE4232B74F400D6E8D7 /* ProtocolBuffersExternal-tvOS */,
 				8BBEA4A5147C727100C4ADB7 /* UnitTests */,
 				F4487C551A9F8F8100531423 /* TestSingleSourceBuild */,
 				F45BBC0E1B0CDB50002D064D /* Compile Unittest Protos */,
@@ -693,6 +763,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6D743D07232B751F00D6E8D7 /* Generate Namspace Header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Namspace Header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#sh ${SRCROOT}/build-scripts/generate-namespace-header.sh\n";
+		};
 		F4B62A791AF91F7500AFCEDC /* Script: Check Runtime Stamps */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -711,6 +799,37 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6D743CE6232B74F400D6E8D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D743CE7232B74F400D6E8D7 /* GPBCodedInputStream.m in Sources */,
+				6D743CE8232B74F400D6E8D7 /* Empty.pbobjc.m in Sources */,
+				6D743CE9232B74F400D6E8D7 /* GPBArray.m in Sources */,
+				6D743CEA232B74F400D6E8D7 /* GPBCodedOutputStream.m in Sources */,
+				6D743CEB232B74F400D6E8D7 /* GPBExtensionRegistry.m in Sources */,
+				6D743CEC232B74F400D6E8D7 /* FieldMask.pbobjc.m in Sources */,
+				6D743CED232B74F400D6E8D7 /* GPBUnknownField.m in Sources */,
+				6D743CEE232B74F400D6E8D7 /* GPBMessage.m in Sources */,
+				6D743CEF232B74F400D6E8D7 /* Duration.pbobjc.m in Sources */,
+				6D743CF0232B74F400D6E8D7 /* GPBUnknownFieldSet.m in Sources */,
+				6D743CF1232B74F400D6E8D7 /* GPBUtilities.m in Sources */,
+				6D743CF2232B74F400D6E8D7 /* GPBWireFormat.m in Sources */,
+				6D743CF3232B74F400D6E8D7 /* Api.pbobjc.m in Sources */,
+				6D743CF4232B74F400D6E8D7 /* SourceContext.pbobjc.m in Sources */,
+				6D743CF5232B74F400D6E8D7 /* GPBDictionary.m in Sources */,
+				6D743CF6232B74F400D6E8D7 /* GPBRootObject.m in Sources */,
+				6D743CF7232B74F400D6E8D7 /* GPBDescriptor.m in Sources */,
+				6D743CF8232B74F400D6E8D7 /* Any.pbobjc.m in Sources */,
+				6D743CF9232B74F400D6E8D7 /* GPBExtensionInternals.m in Sources */,
+				6D743CFA232B74F400D6E8D7 /* GPBWellKnownTypes.m in Sources */,
+				6D743CFB232B74F400D6E8D7 /* Type.pbobjc.m in Sources */,
+				6D743CFC232B74F400D6E8D7 /* Struct.pbobjc.m in Sources */,
+				6D743CFD232B74F400D6E8D7 /* Wrappers.pbobjc.m in Sources */,
+				6D743CFE232B74F400D6E8D7 /* Timestamp.pbobjc.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7461B52B0F94FAF800A0C422 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -813,9 +932,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6D743D06232B751000D6E8D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7461B52D0F94FAF800A0C422 /* ProtocolBuffers-tvOS */;
+			targetProxy = 6D743D05232B751000D6E8D7 /* PBXContainerItemProxy */;
+		};
 		8BBEA4BD147C729A00C4ADB7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7461B52D0F94FAF800A0C422 /* ProtocolBuffers */;
+			target = 7461B52D0F94FAF800A0C422 /* ProtocolBuffers-tvOS */;
 			targetProxy = 8BBEA4BC147C729A00C4ADB7 /* PBXContainerItemProxy */;
 		};
 		F45BBC131B0CDBBA002D064D /* PBXTargetDependency */ = {
@@ -826,11 +950,46 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		6D743D02232B74F400D6E8D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"WSO_EXTERNAL_LIB=1",
+					"DEBUG=1",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6D743D03232B74F400D6E8D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "WSO_EXTERNAL_LIB=1";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		7461B52F0F94FAFA00A0C422 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				PRODUCT_NAME = ProtocolBuffers;
+				PRODUCT_NAME = "ProtocolBuffers-tvOS";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Debug;
@@ -838,8 +997,12 @@
 		7461B5300F94FAFA00A0C422 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
 				CLANG_ENABLE_OBJC_WEAK = YES;
-				PRODUCT_NAME = ProtocolBuffers;
+				PRODUCT_NAME = "ProtocolBuffers-tvOS";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Release;
@@ -960,9 +1123,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_PROFILING_CODE = NO;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = appletvos;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALID_ARCHS = "arm64 x86_64";
 				WARNING_CFLAGS = (
 					"-Wdocumentation-unknown-command",
 					"-Wundef",
@@ -1028,10 +1194,13 @@
 				GCC_WARN_UNUSED_PARAMETER = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_PROFILING_CODE = NO;
+				OTHER_CFLAGS = "-fembed-bitcode";
 				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = appletvos;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALID_ARCHS = "arm64 x86_64";
 				WARNING_CFLAGS = (
 					"-Wdocumentation-unknown-command",
 					"-Wundef",
@@ -1078,7 +1247,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7461B5330F94FAFD00A0C422 /* Build configuration list for PBXNativeTarget "ProtocolBuffers" */ = {
+		6D743D01232B74F400D6E8D7 /* Build configuration list for PBXNativeTarget "ProtocolBuffersExternal-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D743D02232B74F400D6E8D7 /* Debug */,
+				6D743D03232B74F400D6E8D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7461B5330F94FAFD00A0C422 /* Build configuration list for PBXNativeTarget "ProtocolBuffers-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7461B52F0F94FAFA00A0C422 /* Debug */,

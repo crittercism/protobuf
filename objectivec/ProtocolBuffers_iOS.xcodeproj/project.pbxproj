@@ -8,56 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5102DABC1891A073002037B6 /* GPBConcurrencyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5102DABB1891A052002037B6 /* GPBConcurrencyTests.m */; };
-		6D23ABB72115129A00ACE287 /* GPBCodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B48F0F94F99000A0C422 /* GPBCodedInputStream.m */; };
-		6D23ABB82115129A00ACE287 /* Empty.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675BC1B21D1440054530B /* Empty.pbobjc.m */; };
-		6D23ABB92115129A00ACE287 /* GPBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = F4487C711A9F906200531423 /* GPBArray.m */; };
-		6D23ABBA2115129A00ACE287 /* GPBCodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4910F94F99000A0C422 /* GPBCodedOutputStream.m */; };
-		6D23ABBB2115129A00ACE287 /* GPBExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4A90F94F99000A0C422 /* GPBExtensionRegistry.m */; };
-		6D23ABBC2115129A00ACE287 /* FieldMask.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675BE1B21D1440054530B /* FieldMask.pbobjc.m */; };
-		6D23ABBD2115129A00ACE287 /* GPBUnknownField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4AF0F94F99000A0C422 /* GPBUnknownField.m */; };
-		6D23ABBE2115129A00ACE287 /* GPBMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4BF0F94F99000A0C422 /* GPBMessage.m */; };
-		6D23ABBF2115129A00ACE287 /* Duration.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4248DE1A929C7D00BC1EC6 /* Duration.pbobjc.m */; };
-		6D23ABC02115129A00ACE287 /* GPBUnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4E20F94F99000A0C422 /* GPBUnknownFieldSet.m */; };
-		6D23ABC12115129A00ACE287 /* GPBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4E60F94F99000A0C422 /* GPBUtilities.m */; };
-		6D23ABC22115129A00ACE287 /* GPBWireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4E80F94F99000A0C422 /* GPBWireFormat.m */; };
-		6D23ABC32115129A00ACE287 /* Api.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675B91B21D1440054530B /* Api.pbobjc.m */; };
-		6D23ABC42115129A00ACE287 /* SourceContext.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675C01B21D1440054530B /* SourceContext.pbobjc.m */; };
-		6D23ABC52115129A00ACE287 /* GPBDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = F4353D251ABB156F005A6198 /* GPBDictionary.m */; };
-		6D23ABC62115129A00ACE287 /* GPBRootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79657914992E3E002FFBFC /* GPBRootObject.m */; };
-		6D23ABC72115129A00ACE287 /* GPBDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B96157314C8C38C00A2AC0B /* GPBDescriptor.m */; };
-		6D23ABC82115129A00ACE287 /* Any.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675B71B21D1440054530B /* Any.pbobjc.m */; };
-		6D23ABC92115129A00ACE287 /* GPBExtensionInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C69CB16DFD08D0081955B /* GPBExtensionInternals.m */; };
-		6D23ABCA2115129A00ACE287 /* GPBWellKnownTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4248E21A929C8900BC1EC6 /* GPBWellKnownTypes.m */; };
-		6D23ABCB2115129A00ACE287 /* Type.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675C51B21D1440054530B /* Type.pbobjc.m */; };
-		6D23ABCC2115129A00ACE287 /* Struct.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675C21B21D1440054530B /* Struct.pbobjc.m */; };
-		6D23ABCD2115129A00ACE287 /* Wrappers.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675C71B21D1440054530B /* Wrappers.pbobjc.m */; };
-		6D23ABCE2115129A00ACE287 /* Timestamp.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4248E01A929C7D00BC1EC6 /* Timestamp.pbobjc.m */; };
-		6D23ABD02115129A00ACE287 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		6D23ABDB211512A900ACE287 /* GPBCodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B48F0F94F99000A0C422 /* GPBCodedInputStream.m */; };
-		6D23ABDC211512A900ACE287 /* Empty.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675BC1B21D1440054530B /* Empty.pbobjc.m */; };
-		6D23ABDD211512A900ACE287 /* GPBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = F4487C711A9F906200531423 /* GPBArray.m */; };
-		6D23ABDE211512A900ACE287 /* GPBCodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4910F94F99000A0C422 /* GPBCodedOutputStream.m */; };
-		6D23ABDF211512A900ACE287 /* GPBExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4A90F94F99000A0C422 /* GPBExtensionRegistry.m */; };
-		6D23ABE0211512A900ACE287 /* FieldMask.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675BE1B21D1440054530B /* FieldMask.pbobjc.m */; };
-		6D23ABE1211512A900ACE287 /* GPBUnknownField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4AF0F94F99000A0C422 /* GPBUnknownField.m */; };
-		6D23ABE2211512A900ACE287 /* GPBMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4BF0F94F99000A0C422 /* GPBMessage.m */; };
-		6D23ABE3211512A900ACE287 /* Duration.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4248DE1A929C7D00BC1EC6 /* Duration.pbobjc.m */; };
-		6D23ABE4211512A900ACE287 /* GPBUnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4E20F94F99000A0C422 /* GPBUnknownFieldSet.m */; };
-		6D23ABE5211512A900ACE287 /* GPBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4E60F94F99000A0C422 /* GPBUtilities.m */; };
-		6D23ABE6211512A900ACE287 /* GPBWireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B4E80F94F99000A0C422 /* GPBWireFormat.m */; };
-		6D23ABE7211512A900ACE287 /* Api.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675B91B21D1440054530B /* Api.pbobjc.m */; };
-		6D23ABE8211512A900ACE287 /* SourceContext.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675C01B21D1440054530B /* SourceContext.pbobjc.m */; };
-		6D23ABE9211512A900ACE287 /* GPBDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = F4353D251ABB156F005A6198 /* GPBDictionary.m */; };
-		6D23ABEA211512A900ACE287 /* GPBRootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B79657914992E3E002FFBFC /* GPBRootObject.m */; };
-		6D23ABEB211512A900ACE287 /* GPBDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B96157314C8C38C00A2AC0B /* GPBDescriptor.m */; };
-		6D23ABEC211512A900ACE287 /* Any.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675B71B21D1440054530B /* Any.pbobjc.m */; };
-		6D23ABED211512A900ACE287 /* GPBExtensionInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = F45C69CB16DFD08D0081955B /* GPBExtensionInternals.m */; };
-		6D23ABEE211512A900ACE287 /* GPBWellKnownTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4248E21A929C8900BC1EC6 /* GPBWellKnownTypes.m */; };
-		6D23ABEF211512A900ACE287 /* Type.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675C51B21D1440054530B /* Type.pbobjc.m */; };
-		6D23ABF0211512A900ACE287 /* Struct.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675C21B21D1440054530B /* Struct.pbobjc.m */; };
-		6D23ABF1211512A900ACE287 /* Wrappers.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675C71B21D1440054530B /* Wrappers.pbobjc.m */; };
-		6D23ABF2211512A900ACE287 /* Timestamp.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4248E01A929C7D00BC1EC6 /* Timestamp.pbobjc.m */; };
-		6D23ABF4211512A900ACE287 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		6D7060E520F562AE00162419 /* GPBCodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 7461B48F0F94F99000A0C422 /* GPBCodedInputStream.m */; };
 		6D7060E620F562AE00162419 /* Empty.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F4E675BC1B21D1440054530B /* Empty.pbobjc.m */; };
 		6D7060E720F562AE00162419 /* GPBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = F4487C711A9F906200531423 /* GPBArray.m */; };
@@ -173,13 +123,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6D23ABFB2115170400ACE287 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6D23ABB42115129A00ACE287;
-			remoteInfo = "ProtocolBuffers-tvOS";
-		};
 		6D70610720F56FAE00162419 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -209,8 +152,6 @@
 		51457B5F18D0B7AF00CCC606 /* GPBCodedInputStream_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBCodedInputStream_PackagePrivate.h; sourceTree = "<group>"; };
 		515B840C18B7DEE30031753B /* GPBDescriptor_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBDescriptor_PackagePrivate.h; sourceTree = "<group>"; };
 		5196A06918CE16B000B759E2 /* GPBMessage_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBMessage_PackagePrivate.h; sourceTree = "<group>"; };
-		6D23ABD42115129A00ACE287 /* libProtocolBuffers-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libProtocolBuffers-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D23ABF8211512A900ACE287 /* libProtocolBuffersExternal-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libProtocolBuffersExternal-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D70610220F562AE00162419 /* libProtocolBuffersExternal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libProtocolBuffersExternal.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7401C1A90F950347006D8281 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		7461B48D0F94F99000A0C422 /* GPBBootstrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBBootstrap.h; sourceTree = "<group>"; };
@@ -367,22 +308,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6D23ABCF2115129A00ACE287 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6D23ABD02115129A00ACE287 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6D23ABF3211512A900ACE287 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6D23ABF4211512A900ACE287 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6D7060FD20F562AE00162419 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,8 +368,6 @@
 				8BBEA4A6147C727100C4ADB7 /* UnitTests.xctest */,
 				F4487C6E1A9F8F8100531423 /* libTestSingleSourceBuild.a */,
 				6D70610220F562AE00162419 /* libProtocolBuffersExternal.a */,
-				6D23ABD42115129A00ACE287 /* libProtocolBuffers-tvOS.a */,
-				6D23ABF8211512A900ACE287 /* libProtocolBuffersExternal-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -670,20 +593,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6D23ABB52115129A00ACE287 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6D23ABD9211512A900ACE287 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6D7060E320F562AE00162419 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -725,42 +634,6 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		6D23ABB42115129A00ACE287 /* ProtocolBuffers-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6D23ABD12115129A00ACE287 /* Build configuration list for PBXNativeTarget "ProtocolBuffers-tvOS" */;
-			buildPhases = (
-				6D23ABB52115129A00ACE287 /* Headers */,
-				6D23ABB62115129A00ACE287 /* Sources */,
-				6D23ABCF2115129A00ACE287 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ProtocolBuffers-tvOS";
-			productName = "ProtocolBuffers-iPhoneDevice";
-			productReference = 6D23ABD42115129A00ACE287 /* libProtocolBuffers-tvOS.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		6D23ABD5211512A900ACE287 /* ProtocolBuffersExternal-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6D23ABF5211512A900ACE287 /* Build configuration list for PBXNativeTarget "ProtocolBuffersExternal-tvOS" */;
-			buildPhases = (
-				6D23ABD8211512A900ACE287 /* Generate Namespace Header */,
-				6D23ABD9211512A900ACE287 /* Headers */,
-				6D23ABDA211512A900ACE287 /* Sources */,
-				6D23ABF3211512A900ACE287 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6D23ABFC2115170400ACE287 /* PBXTargetDependency */,
-			);
-			name = "ProtocolBuffersExternal-tvOS";
-			productName = "ProtocolBuffers-iPhoneDevice";
-			productReference = 6D23ABF8211512A900ACE287 /* libProtocolBuffersExternal-tvOS.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		6D7060E220F562AE00162419 /* ProtocolBuffersExternal */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D7060FF20F562AE00162419 /* Build configuration list for PBXNativeTarget "ProtocolBuffersExternal" */;
@@ -866,9 +739,7 @@
 			projectRoot = "";
 			targets = (
 				7461B52D0F94FAF800A0C422 /* ProtocolBuffers */,
-				6D23ABB42115129A00ACE287 /* ProtocolBuffers-tvOS */,
 				6D7060E220F562AE00162419 /* ProtocolBuffersExternal */,
-				6D23ABD5211512A900ACE287 /* ProtocolBuffersExternal-tvOS */,
 				8BBEA4A5147C727100C4ADB7 /* UnitTests */,
 				F4487C551A9F8F8100531423 /* TestSingleSourceBuild */,
 				F45BBC0E1B0CDB50002D064D /* Compile Unittest Protos */,
@@ -892,20 +763,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6D23ABD8211512A900ACE287 /* Generate Namespace Header */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Generate Namespace Header";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#sh ${SRCROOT}/build-scripts/generate-namespace-header.sh";
-		};
 		6D70610620F56A6F00162419 /* Generate Namespace Header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -918,7 +775,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#sh ${SRCROOT}/build-scripts/generate-namespace-header.sh";
+			shellScript = "#sh ${SRCROOT}/build-scripts/generate-namespace-header.sh\n";
 		};
 		F4B62A791AF91F7500AFCEDC /* Script: Check Runtime Stamps */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -938,68 +795,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6D23ABB62115129A00ACE287 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6D23ABB72115129A00ACE287 /* GPBCodedInputStream.m in Sources */,
-				6D23ABB82115129A00ACE287 /* Empty.pbobjc.m in Sources */,
-				6D23ABB92115129A00ACE287 /* GPBArray.m in Sources */,
-				6D23ABBA2115129A00ACE287 /* GPBCodedOutputStream.m in Sources */,
-				6D23ABBB2115129A00ACE287 /* GPBExtensionRegistry.m in Sources */,
-				6D23ABBC2115129A00ACE287 /* FieldMask.pbobjc.m in Sources */,
-				6D23ABBD2115129A00ACE287 /* GPBUnknownField.m in Sources */,
-				6D23ABBE2115129A00ACE287 /* GPBMessage.m in Sources */,
-				6D23ABBF2115129A00ACE287 /* Duration.pbobjc.m in Sources */,
-				6D23ABC02115129A00ACE287 /* GPBUnknownFieldSet.m in Sources */,
-				6D23ABC12115129A00ACE287 /* GPBUtilities.m in Sources */,
-				6D23ABC22115129A00ACE287 /* GPBWireFormat.m in Sources */,
-				6D23ABC32115129A00ACE287 /* Api.pbobjc.m in Sources */,
-				6D23ABC42115129A00ACE287 /* SourceContext.pbobjc.m in Sources */,
-				6D23ABC52115129A00ACE287 /* GPBDictionary.m in Sources */,
-				6D23ABC62115129A00ACE287 /* GPBRootObject.m in Sources */,
-				6D23ABC72115129A00ACE287 /* GPBDescriptor.m in Sources */,
-				6D23ABC82115129A00ACE287 /* Any.pbobjc.m in Sources */,
-				6D23ABC92115129A00ACE287 /* GPBExtensionInternals.m in Sources */,
-				6D23ABCA2115129A00ACE287 /* GPBWellKnownTypes.m in Sources */,
-				6D23ABCB2115129A00ACE287 /* Type.pbobjc.m in Sources */,
-				6D23ABCC2115129A00ACE287 /* Struct.pbobjc.m in Sources */,
-				6D23ABCD2115129A00ACE287 /* Wrappers.pbobjc.m in Sources */,
-				6D23ABCE2115129A00ACE287 /* Timestamp.pbobjc.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6D23ABDA211512A900ACE287 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6D23ABDB211512A900ACE287 /* GPBCodedInputStream.m in Sources */,
-				6D23ABDC211512A900ACE287 /* Empty.pbobjc.m in Sources */,
-				6D23ABDD211512A900ACE287 /* GPBArray.m in Sources */,
-				6D23ABDE211512A900ACE287 /* GPBCodedOutputStream.m in Sources */,
-				6D23ABDF211512A900ACE287 /* GPBExtensionRegistry.m in Sources */,
-				6D23ABE0211512A900ACE287 /* FieldMask.pbobjc.m in Sources */,
-				6D23ABE1211512A900ACE287 /* GPBUnknownField.m in Sources */,
-				6D23ABE2211512A900ACE287 /* GPBMessage.m in Sources */,
-				6D23ABE3211512A900ACE287 /* Duration.pbobjc.m in Sources */,
-				6D23ABE4211512A900ACE287 /* GPBUnknownFieldSet.m in Sources */,
-				6D23ABE5211512A900ACE287 /* GPBUtilities.m in Sources */,
-				6D23ABE6211512A900ACE287 /* GPBWireFormat.m in Sources */,
-				6D23ABE7211512A900ACE287 /* Api.pbobjc.m in Sources */,
-				6D23ABE8211512A900ACE287 /* SourceContext.pbobjc.m in Sources */,
-				6D23ABE9211512A900ACE287 /* GPBDictionary.m in Sources */,
-				6D23ABEA211512A900ACE287 /* GPBRootObject.m in Sources */,
-				6D23ABEB211512A900ACE287 /* GPBDescriptor.m in Sources */,
-				6D23ABEC211512A900ACE287 /* Any.pbobjc.m in Sources */,
-				6D23ABED211512A900ACE287 /* GPBExtensionInternals.m in Sources */,
-				6D23ABEE211512A900ACE287 /* GPBWellKnownTypes.m in Sources */,
-				6D23ABEF211512A900ACE287 /* Type.pbobjc.m in Sources */,
-				6D23ABF0211512A900ACE287 /* Struct.pbobjc.m in Sources */,
-				6D23ABF1211512A900ACE287 /* Wrappers.pbobjc.m in Sources */,
-				6D23ABF2211512A900ACE287 /* Timestamp.pbobjc.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6D7060E420F562AE00162419 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1133,11 +928,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6D23ABFC2115170400ACE287 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6D23ABB42115129A00ACE287 /* ProtocolBuffers-tvOS */;
-			targetProxy = 6D23ABFB2115170400ACE287 /* PBXContainerItemProxy */;
-		};
 		6D70610820F56FAE00162419 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7461B52D0F94FAF800A0C422 /* ProtocolBuffers */;
@@ -1156,79 +946,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		6D23ABD22115129A00ACE287 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 x86_64";
-			};
-			name = Debug;
-		};
-		6D23ABD32115129A00ACE287 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 x86_64";
-			};
-			name = Release;
-		};
-		6D23ABF6211512A900ACE287 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"WSO_EXTERNAL_LIB=1",
-					"DEBUG=1",
-				);
-				HEADER_SEARCH_PATHS = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 x86_64";
-			};
-			name = Debug;
-		};
-		6D23ABF7211512A900ACE287 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = "WSO_EXTERNAL_LIB=1";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 x86_64";
-			};
-			name = Release;
-		};
 		6D70610020F562AE00162419 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1541,24 +1258,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6D23ABD12115129A00ACE287 /* Build configuration list for PBXNativeTarget "ProtocolBuffers-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6D23ABD22115129A00ACE287 /* Debug */,
-				6D23ABD32115129A00ACE287 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6D23ABF5211512A900ACE287 /* Build configuration list for PBXNativeTarget "ProtocolBuffersExternal-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6D23ABF6211512A900ACE287 /* Debug */,
-				6D23ABF7211512A900ACE287 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		6D7060FF20F562AE00162419 /* Build configuration list for PBXNativeTarget "ProtocolBuffersExternal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
