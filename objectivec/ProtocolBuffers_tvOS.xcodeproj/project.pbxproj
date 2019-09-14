@@ -123,12 +123,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6D743D05232B751000D6E8D7 /* PBXContainerItemProxy */ = {
+		6D744255232C68EF0046F1C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7461B52D0F94FAF800A0C422;
-			remoteInfo = ProtocolBuffers;
+			remoteInfo = "ProtocolBuffers-tvOS";
 		};
 		8BBEA4BC147C729A00C4ADB7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -646,7 +646,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				6D743D06232B751000D6E8D7 /* PBXTargetDependency */,
+				6D744256232C68EF0046F1C0 /* PBXTargetDependency */,
 			);
 			name = "ProtocolBuffersExternal-tvOS";
 			productName = "ProtocolBuffers-iPhoneDevice";
@@ -932,10 +932,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6D743D06232B751000D6E8D7 /* PBXTargetDependency */ = {
+		6D744256232C68EF0046F1C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7461B52D0F94FAF800A0C422 /* ProtocolBuffers-tvOS */;
-			targetProxy = 6D743D05232B751000D6E8D7 /* PBXContainerItemProxy */;
+			targetProxy = 6D744255232C68EF0046F1C0 /* PBXContainerItemProxy */;
 		};
 		8BBEA4BD147C729A00C4ADB7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -953,10 +953,7 @@
 		6D743D02232B74F400D6E8D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"WSO_EXTERNAL_LIB=1",
@@ -964,32 +961,32 @@
 				);
 				HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
 		};
 		6D743D03232B74F400D6E8D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "WSO_EXTERNAL_LIB=1";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
 		};
 		7461B52F0F94FAFA00A0C422 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				PRODUCT_NAME = "ProtocolBuffers-tvOS";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Debug;
@@ -997,12 +994,11 @@
 		7461B5300F94FAFA00A0C422 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				PRODUCT_NAME = "ProtocolBuffers-tvOS";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Release;
@@ -1069,12 +1065,11 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
-				CLANG_STATIC_ANALYZER_MODE = deep;
+				CLANG_STATIC_ANALYZER_MODE = shallow;
 				CLANG_WARN_ASSIGN_ENUM = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_COMMA = YES;
@@ -1125,7 +1120,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-fembed-bitcode";
-				RUN_CLANG_STATIC_ANALYZER = YES;
+				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -1144,11 +1139,11 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
 				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_STATIC_ANALYZER_MODE = deep;
 				CLANG_WARN_ASSIGN_ENUM = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
